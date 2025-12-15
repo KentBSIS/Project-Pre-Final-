@@ -1,0 +1,199 @@
+Documentation and Explanation of Visual Novel - Dispatch Decision Engine in C++
+By: Aljosh Kyle Benedict A. Mendoza / Kent Steven N. Abillon
+
+
+Project Goal
+
+Design and create the functional structure for a simple, text-based visual novel (VN) featuring the character Robert from Dispatch. The program must incorporate at least five distinct decision points, where user input (a choice) determines the flow of the story and updates character relationship variables using C++ functions and Boolean logic.
+
+
+Variable and its Explanation:
+
+bool isMerciful 
+//This variable tracks Robert's moral decision path.
+
+bool isRomanticTension 
+//This variable used to track the romantic tension of Robert and Blonde Blazer.
+
+bool isRobertInjured 
+//This variable is responsible for identifying if Robert is injured in a fight scene.
+
+int Blonde_BlazerInterest 
+//This variable estimates the Blonde Blazer impression where when it is high, she is more expressive.
+
+int Flambae_Anger_Level 
+//Estimate the anger level of Flambae in the bar scene. It increases when Robert throws water on him but it increase more when it Robert throws the Alcohol
+
+
+Functions:
+
+void typewrite(string text, int speed = 50000) 
+//Prints the text with pacing like a typewriter effect to make the game more expressive.
+
+main()
+//Function everything in the code/program. 
+
+void scene_apartment_interrogation() 
+//Introduce the play to the main character which is Robert and shows the conflict of the story which is the history of his father and the pursuit of Shroud.
+// The bool isMerciful is triggered in this scene, the player can decide to be less violent sparing the enemy or show pity, when this path is chosen the bool isMerciful became true but, if the player decide to be more violent then the player takes the brutal path for the enemy then the bool isMerciful became false.
+
+//Decision path:
+Choice 1
+”How do you really feel about your father?”
+A = I love my dad.
+W = Didn't know him well.
+D = He's gone
+
+Choice 2
+“What to do with the Soothing Voice?”
+ A = let him drop
+ D = Pull him Back
+
+Flowchart:
+
+
+
+void warehouse()
+//Shows the warehouse scene where Mecha Man breaks into the warehouse and fights the enemy inside. The player makes the choice of movement of the character. 
+//In the end Mecha Man realizes that it is a trap and tries to flee but there is a bomb attached to him causing his fall and his suit destroyed.
+
+//Decision path:
+Choice 1
+“What to say to Soothing Voice”
+W = Prepare to die.
+ A = it's over, Shroud.
+ D = I'm here to fuck you up.
+
+Choice 2
+“What to do with Soothing Voice?”
+ A = Punt
+D = Stomp
+
+Choice 3
+“What to say to Toxic?”
+W = Ignore him
+A = Bullshit
+D = you're bluffing.
+
+Flowchart:
+
+
+
+
+
+void news()
+//function the warehouse scene. Display the news about Mecha Man’s Retirement. The sense where Robert is questioned by the public about his future career and his suit. This scene eventually ends where Robert left the interview leaving the public with the thought of Mecha Man as a quitter.
+
+//Decision path:
+Choice 1 
+“What do you want to say to your fans?”
+W = Thank you
+A = I did my best
+D = It was all for you
+
+Choice 2
+“Are you retiring Mecha Man?”
+W = No comment
+A = Pretty much.
+D = Not yet. 
+
+Choice 3
+“What to do with the reporter 3’s question?”
+W = LEAVE
+A = ANSWER
+D = ATTACK
+
+Flowchart:
+
+
+
+
+void streetfight()
+//The scene begins with Robert watching TV outside the shop and there are robbers robbing the same store. The robbers do not acknowledge Robert as he is no longer capable of being a hero. With all the choices, it all ended up with the robber beating Robert. Then , Blonde Blazer enters the scene taking all the robbers down.
+//The streetfight scene triggered the bool isRobertInjured, the player is in the fighting scene he has the ability to throw the right move/attack (punch), and the variable becomes true and if the player miss/wrong the punch then the variable becomes false.
+//the int Blonde_BlazerInterest is also increased in this part as Blonde Blazer enters the scene and saves Robert. 
+
+//Decision path:
+Choice 1
+“What to say to the Robbers?”
+W = Put it down and leave.
+A = that's pretty disrespectful
+D = I was watching that.
+
+Choice 2
+“Who are you?”
+W = someone with nothing to lose.
+A = I'm Mecha Man.
+D = Honestly, not sure anymore. 
+
+Choice 5
+“Which arm to punch?“
+A = Punch with left 
+D = punch with right
+
+Choice 4
+“What to say to Blonde Blazer?”
+W = Have you done this before?
+A = I'd prefer a professional.
+D = I can do it myself.
+
+Flowchart:
+
+
+
+void Bar()
+//function the bar scene. Show the interaction of Robert and Blonde Blazer at the bar. Trigger the variables; Blonde_BlazerInterest and Flambae_Angry_Level.
+
+//Decision path:
+Choice 1
+“What to say after Blonde Blazer chugs her drink?“
+W = that feels like a challenge
+A = Rough day?
+D = Impressive.
+
+Choice 2
+“Reply to Blazer”
+W = I don't know. . .
+A = I like helping people.
+D = only thing I'm good at. 
+
+Choice 3
+“What to say about Blazer’s Proposition?”
+W = Hopefully nothing scandalous.
+A = Sounds intriguing. 
+D = A bar proposition? 
+
+Choice 4
+“What does the Flambae look like?“
+W = Dr. Don't do shit
+A = Mr. Wet Ponytail
+D = Sunglasses at Night guy
+
+Choice 5
+“What to throw at Flambae?”
+A = [WATER}
+D ={ALCOHOL}
+
+Flowchart:
+
+
+
+
+void Billboard()
+//bool isRomanticTension //The bool isRomanticTensionActive is used in the billboard scene where there is a choice to kiss Blonde Blazer or just let it pass. If Robert chooses to kiss Blonde Blazer then this variable becomes true and if he lets it pass then the variable becomes false.
+
+
+//Decision path:
+Choice 1
+“What to say to Blazer”
+A - Thanks for helping me.
+W - I really needed this.
+D - Sorry about the spit thing.
+
+Choice 2
+“What to do with Blazer”
+A - [KISS HER] 
+D - [LET THE MOMENT PASS]
+
+Flowchart:
+
