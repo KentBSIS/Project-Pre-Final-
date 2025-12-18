@@ -44,7 +44,7 @@ do{//loop for choices
 int choice;
 
   std::cout<<"==========LOBBY=========="<<endl;//used std because for some reason cout becomes ambigous
-  std::cout<<"Dispatch cover by Aljosh Mendoza & Kent Abillion"<<endl;
+  std::cout<<"Dispatch cover by Aljosh Mendoza & Kent Abillon"<<endl;
   std::cout<<"0 = full story run"<<endl;
   std::cout<<"1 = Interrogation"<<endl;
   std::cout<<"2 = Warehouse"<<endl;
@@ -119,9 +119,7 @@ int choice;
 void scene_apartment_interrogation(){
    typewrite("\nWelcome to Dispatch");
    this_thread::sleep_for(chrono::seconds(1));
-   typewrite("\nExclusively made by Aljosh Mendoza");
-   this_thread::sleep_for(chrono::seconds(1));
-      typewrite("\nDocumented and flowchart by Kent Steven Abillion");
+   typewrite("\nExclusively made by Aljosh Mendoza and Kent Abillon");
    this_thread::sleep_for(chrono::seconds(1));
    typewrite("\nNOTE: input a command not among the choices will result in bad outcomes. . .");
    this_thread::sleep_for(chrono::seconds(1));
@@ -2854,4 +2852,5 @@ else{
   cout<<"He's pissed at you"<<endl;
   cout<<"Possible future tension*"<<endl;
 }// this shi took me 3 nights to do 3k lines means it's all sweat and blood, hope yall dont think it's ai or imma crash
+
 }
